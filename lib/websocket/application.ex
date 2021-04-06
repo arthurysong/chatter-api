@@ -35,7 +35,7 @@ defmodule Websocket.Application do
   defp dispatch do
     [
       {:_, [
-        {"/ws", Websocket.SocketHandler, []},
+        {"/ws/[...]", Websocket.SocketHandler, []},
         {:_, Plug.Cowboy.Handler, {Websocket.Router, []}}
       ]}
     ]
