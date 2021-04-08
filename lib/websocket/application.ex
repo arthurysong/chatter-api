@@ -9,17 +9,20 @@ defmodule Websocket.Application do
   def start(_type, _args) do
 
     import Supervisor.Spec, warn: false
+    # IO.puts("port" <> Application.fetch_env!(:websocket, :port))
 
     children = [
       # Starts a worker by calling: Websocket.Worker.start_link(arg)
       # {Websocket.Worker, arg}
       {
         Plug.Cowboy, scheme: :http, plug: Websocket.Router, options: [
+          # port: 4000,
+          # port: Application.fetch_env!(:websocket, :port),
           port: 4000,
           dispatch: dispatch()
         ]
       },
-      {Websocket.Counter, 0},
+      # {Websocket.Counter, 0},
       Registry.child_spec(
         keys: :duplicate,
         name: Registry.MyWebsocketApp

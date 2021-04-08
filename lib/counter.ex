@@ -1,4 +1,5 @@
 defmodule Websocket.Counter do
+  # this is just a test agent for learning purposes.
   use Agent
 
   def start_link(initial_value) do

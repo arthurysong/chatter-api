@@ -1,0 +1,759 @@
+2021-04-06 15:08:36 =ERROR REPORT====
+Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4000}]) for reason eaddrinuse (address already in use)
+2021-04-06 15:08:36 =SUPERVISOR REPORT====
+     Supervisor: {<0.309.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-06 15:08:36 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.311.0>
+    registered_name: []
+    exception exit: {{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse},[{ranch_acceptors_sup,listen_error,5,[{file,"/home/arthur/code/websocket/deps/ranch/src/ranch_acceptors_sup.erl"},{line,66}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,301}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.309.0>,'Elixir.Websocket.Supervisor',<0.307.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.309.0>]
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 4702
+  neighbours:
+2021-04-06 15:08:36 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,4000}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Websocket.Router',[]}}]}]},stream_handlers => [cowboy_telemetry_h,cowboy_stream_h]}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-06 15:08:36 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.306.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.305.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.307.0>,normal}]
+    links: [<0.305.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 195
+  neighbours:
+2021-04-06 15:13:57 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.7>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 2622
+  neighbours:
+2021-04-06 15:13:57 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:14:26 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.7>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 2622
+  neighbours:
+2021-04-06 15:14:26 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:14:50 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.7>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 2622
+  neighbours:
+2021-04-06 15:14:50 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:15:02 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.445.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.8>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2434
+  neighbours:
+2021-04-06 15:15:02 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.445.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,24}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:15:05 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 1
+    messages: [{tcp,#Port<0.7>,<<136,130,229,110,220,51,230,157>>}]
+    links: [<0.440.0>,#Port<0.7>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 3403
+  neighbours:
+2021-04-06 15:15:05 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:15:14 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.445.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.440.0>,#Port<0.8>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 3118
+  neighbours:
+2021-04-06 15:15:14 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.445.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:15:53 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.440.0>,#Port<0.7>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 3395
+  neighbours:
+2021-04-06 15:15:53 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:16:31 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,57}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.440.0>,#Port<0.7>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 3754
+  neighbours:
+2021-04-06 15:16:31 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,57}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:16:51 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception error: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.440.0>,#Port<0.7>,<0.336.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 3750
+  neighbours:
+2021-04-06 15:16:51 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{badkey,channel,#{registry_key => <<"/ws/chat">>}},[{'Elixir.Websocket.SocketHandler',websocket_handle,2,[{file,"lib/websocket/socket_handler.ex"},{line,56}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,528}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-06 15:20:36 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.443.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.460.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,22}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.7>,<0.336.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 2737
+  neighbours:
+2021-04-06 15:20:36 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.443.0> exit with reason: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.460.0>},60000]}}
+2021-04-06 15:21:38 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.444.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.460.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.443.0>,<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.443.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5544
+  neighbours:
+2021-04-06 15:21:38 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.443.0>, stream 1 had its request process <0.444.0> exit with reason {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.460.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-06 15:25:26 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.444.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.460.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.443.0>,<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.443.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 5548
+  neighbours:
+2021-04-06 15:25:26 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.443.0>, stream 1 had its request process <0.444.0> exit with reason {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.460.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 18:40:19 =ERROR REPORT====
+Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4000}]) for reason eaddrinuse (address already in use)
+2021-04-07 18:40:19 =SUPERVISOR REPORT====
+     Supervisor: {<0.320.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-07 18:40:19 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,4000}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Websocket.Router',[]}}]}]},stream_handlers => [cowboy_telemetry_h,cowboy_stream_h]}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-07 18:40:19 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.322.0>
+    registered_name: []
+    exception exit: {{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse},[{ranch_acceptors_sup,listen_error,5,[{file,"/home/arthur/code/websocket/deps/ranch/src/ranch_acceptors_sup.erl"},{line,66}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,301}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.320.0>,'Elixir.Websocket.Supervisor',<0.318.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.320.0>]
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 4702
+  neighbours:
+2021-04-07 18:40:19 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.317.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.316.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.318.0>,normal}]
+    links: [<0.316.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 192
+  neighbours:
+2021-04-07 18:43:02 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.509.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.521.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.523.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.507.0>,<0.321.0>,<0.320.0>,'Elixir.Websocket.Supervisor',<0.318.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.507.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 5312
+  neighbours:
+2021-04-07 18:43:02 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.507.0>, stream 1 had its request process <0.509.0> exit with reason {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'messages' in vhost '/'">>}},{gen_server,call,[<0.521.0>,{subscribe,{'basic.consume',0,<<"messages">>,<<>>,false,true,false,false,[]},<0.523.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,375}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,16}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 18:55:40 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.444.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'websocket_test_exchange' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{call,{'queue.bind',0,<<"websocket_test_queue">>,<<"websocket_test_exchange">>,<<>>,false,[]},none,<0.444.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.443.0>,<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.443.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5681
+  neighbours:
+2021-04-07 18:55:40 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.443.0>, stream 1 had its request process <0.444.0> exit with reason {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'websocket_test_exchange' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{call,{'queue.bind',0,<<"websocket_test_queue">>,<<"websocket_test_exchange">>,<<>>,false,[]},none,<0.444.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 18:56:33 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.444.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'websocket_test_queue' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{call,{'queue.bind',0,<<"websocket_test_queue">>,<<"websocket_test_exchange">>,<<>>,false,[]},none,<0.444.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.443.0>,<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.443.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5589
+  neighbours:
+2021-04-07 18:56:33 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.443.0>, stream 1 had its request process <0.444.0> exit with reason {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'websocket_test_queue' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{call,{'queue.bind',0,<<"websocket_test_queue">>,<<"websocket_test_exchange">>,<<>>,false,[]},none,<0.444.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 18:57:36 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.444.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'websocket_test_queue' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{call,{'queue.bind',0,<<"websocket_test_queue">>,<<"websocket_test_exchange">>,<<>>,false,[]},none,<0.444.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.443.0>,<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.443.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5585
+  neighbours:
+2021-04-07 18:57:36 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.443.0>, stream 1 had its request process <0.444.0> exit with reason {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'websocket_test_queue' in vhost '/'">>}},{gen_server,call,[<0.458.0>,{call,{'queue.bind',0,<<"websocket_test_queue">>,<<"websocket_test_exchange">>,<<>>,false,[]},none,<0.444.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',bind,4,[{file,"lib/amqp/queue.ex"},{line,81}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,109}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 19:08:25 =ERROR REPORT====
+** Generic server <0.492.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-0vhlEQQzbbsqHaK3Cie5Qg">>,1,false,<<"websocket_test_exchange">>,<<>>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"fuck you">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2021-04-07 19:08:25 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.492.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/arthur/code/websocket/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.491.0>,<0.485.0>,<0.483.0>,<0.482.0>,amqp_sup,<0.324.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.491.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:57547 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 4185
+  neighbours:
+2021-04-07 19:08:25 =ERROR REPORT====
+** Generic server <0.493.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-0vhlEQQzbbsqHaK3Cie5Qg">>,1,false,<<"websocket_test_exchange">>,<<>>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"fuck you">>]},noflow}}
+** When Server state == {state,1,<0.484.0>,<0.492.0>,network,{[],[]},false,<0.494.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.492.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-0vhlEQQzbbsqHaK3Cie5Qg">>,1,false,<<"websocket_test_exchange">>,<<>>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"fuck you">>}},60000]}},[{gen_server2,call,3,[{file,"/home/arthur/code/websocket/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/arthur/code/websocket/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,689}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,765}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-07 19:08:25 =SUPERVISOR REPORT====
+     Supervisor: {<0.491.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.492.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:57547 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-04-07 19:08:25 =SUPERVISOR REPORT====
+     Supervisor: {<0.491.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.492.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:57547 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-04-07 19:17:46 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.554.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.566.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.554.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,117}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,117}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.553.0>,<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.553.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5235
+  neighbours:
+2021-04-07 19:17:46 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.553.0>, stream 1 had its request process <0.554.0> exit with reason {{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.566.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.554.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,117}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 19:18:21 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.573.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.585.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.573.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,117}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,117}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.572.0>,<0.336.0>,<0.335.0>,'Elixir.Websocket.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.572.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5235
+  neighbours:
+2021-04-07 19:18:21 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.572.0>, stream 1 had its request process <0.573.0> exit with reason {{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.585.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.573.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,117}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 19:20:42 =ERROR REPORT====
+** Generic server <0.443.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-U9xrIs8olFEPbQOafSLR0w">>,1,false,<<"websocket_test_exchange">>,<<>>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"Hello server!">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2021-04-07 19:20:42 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.443.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/arthur/code/websocket/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.442.0>,<0.436.0>,<0.432.0>,<0.431.0>,amqp_sup,<0.309.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.442.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:51507 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 4275
+  neighbours:
+2021-04-07 19:20:42 =SUPERVISOR REPORT====
+     Supervisor: {<0.442.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.443.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:51507 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-04-07 19:20:42 =SUPERVISOR REPORT====
+     Supervisor: {<0.442.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.443.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:51507 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-04-07 19:55:57 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.331.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.Websocket.Application',start,[normal,[]]},{'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :port for application :websocket because configuration at :port was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.Application',start,2,[{file,"lib/websocket/application.ex"},{line,12}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,277}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.330.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.332.0>,normal}]
+    links: [<0.330.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 215
+  neighbours:
+2021-04-07 19:56:15 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.317.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.Websocket.Application',start,[normal,[]]},{'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :port for application :websocket because configuration at :port was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.Application',start,2,[{file,"lib/websocket/application.ex"},{line,12}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,277}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.316.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.318.0>,normal}]
+    links: [<0.316.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 215
+  neighbours:
+2021-04-07 19:58:47 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.331.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.Websocket.Application',start,[normal,[]]},{'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :port for application :websocket because configuration at :port was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.Application',start,2,[{file,"lib/websocket/application.ex"},{line,12}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,277}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.330.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.332.0>,normal}]
+    links: [<0.330.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 215
+  neighbours:
+2021-04-07 20:02:59 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.443.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.457.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.443.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.442.0>,<0.335.0>,<0.334.0>,'Elixir.Websocket.Supervisor',<0.332.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.442.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5587
+  neighbours:
+2021-04-07 20:02:59 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.442.0>, stream 1 had its request process <0.443.0> exit with reason {{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.457.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.443.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 20:03:28 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.465.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.477.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.465.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.464.0>,<0.335.0>,<0.334.0>,'Elixir.Websocket.Supervisor',<0.332.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.464.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5323
+  neighbours:
+2021-04-07 20:03:28 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.464.0>, stream 1 had its request process <0.465.0> exit with reason {{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.477.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.465.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 20:03:28 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.480.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.492.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.480.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.479.0>,<0.335.0>,<0.334.0>,'Elixir.Websocket.Supervisor',<0.332.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.479.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 5321
+  neighbours:
+2021-04-07 20:03:28 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.479.0>, stream 1 had its request process <0.480.0> exit with reason {{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.492.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.480.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 20:03:44 =ERROR REPORT====
+Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4001}]) for reason eaddrinuse (address already in use)
+2021-04-07 20:03:44 =SUPERVISOR REPORT====
+     Supervisor: {<0.320.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-07 20:03:44 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,4001}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Websocket.Router',[]}}]}]},stream_handlers => [cowboy_telemetry_h,cowboy_stream_h]}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-07 20:03:44 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.317.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.316.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.318.0>,normal}]
+    links: [<0.316.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 214
+  neighbours:
+2021-04-07 20:03:44 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.322.0>
+    registered_name: []
+    exception exit: {{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse},[{ranch_acceptors_sup,listen_error,5,[{file,"/home/arthur/code/websocket/deps/ranch/src/ranch_acceptors_sup.erl"},{line,66}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,301}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.320.0>,'Elixir.Websocket.Supervisor',<0.318.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.320.0>,{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}}]
+    links: []
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 4703
+  neighbours:
+2021-04-07 20:04:36 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.442.0>
+    registered_name: []
+    exception exit: {{{{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.456.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.442.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.441.0>,<0.335.0>,<0.334.0>,'Elixir.Websocket.Supervisor',<0.332.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.441.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 5552
+  neighbours:
+2021-04-07 20:04:36 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.441.0>, stream 1 had its request process <0.442.0> exit with reason {{shutdown,{server_initiated_close,405,<<"RESOURCE_LOCKED - cannot obtain exclusive access to locked queue 'websocket_test_queue' in vhost '/'. It could be originally declared on another connection or the exclusive property value does not match that of the original declaration.">>}},{gen_server,call,[<0.456.0>,{call,{'queue.declare',0,<<"websocket_test_queue">>,false,false,true,false,false,[]},none,<0.442.0>},60000]}} and stacktrace [{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.SocketHandler',setup_queue,1,[{file,"lib/websocket/socket_handler.ex"},{line,114}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,17}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-07 20:08:36 =ERROR REPORT====
+** Generic server <0.456.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-0Ef3QR7nmRchgfs4hQV6jQ">>,1,false,<<"websocket_test_exchange">>,<<>>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"Hello server!">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2021-04-07 20:08:36 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.456.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/arthur/code/websocket/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.455.0>,<0.449.0>,<0.445.0>,<0.444.0>,amqp_sup,<0.324.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.455.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:32783 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 4275
+  neighbours:
+2021-04-07 20:08:36 =SUPERVISOR REPORT====
+     Supervisor: {<0.455.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.456.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:32783 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-04-07 20:08:36 =SUPERVISOR REPORT====
+     Supervisor: {<0.455.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.456.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:32783 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-04-07 20:09:53 =ERROR REPORT====
+** Generic server <0.456.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-JvslPtGFLTkc7k1x2oKsag">>,1,true,<<"websocket_test_exchange">>,<<>>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"Hello server!">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2021-04-07 20:09:53 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.456.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/arthur/code/websocket/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.455.0>,<0.449.0>,<0.445.0>,<0.444.0>,amqp_sup,<0.324.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.455.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:54693 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 4275
+  neighbours:
+2021-04-07 20:09:53 =SUPERVISOR REPORT====
+     Supervisor: {<0.455.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.456.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:54693 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-04-07 20:09:53 =SUPERVISOR REPORT====
+     Supervisor: {<0.455.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.456.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:54693 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
