@@ -11,7 +11,7 @@ defmodule Websocket.AMQPConsumer do
 
   @exchange    "chatter_test_exchange"
   @queue       "chatter_test_queue"
-  @queue_error "#{@queue}_error"
+  # @queue_error "#{@queue}_error"
 
   def init(_opts) do
     # a connection is a tcp connection to interact with RabbitMQ...
@@ -23,20 +23,20 @@ defmodule Websocket.AMQPConsumer do
     # Limit unacknowledged messages to 10
     :ok = Basic.qos(chan, prefetch_count: 10)
 
-    IO.puts("genserver started and amqp connection init")
+    # IO.puts("genserver started and amqp connection init")
     # Register the GenServer process as a consumer
     {:ok, _consumer_tag} = Basic.consume(chan, @queue)
     {:ok, chan}
   end
 
   def handle_call({:get_state}, _from, chan) do
-    IO.puts("handling call in genserver")
+    # IO.puts("handling call in genserver")
     {:reply, :erlang.pid_to_list(self()), chan}
   end
 
   def handle_cast({:publish, pub_map}, chan) do
-    IO.puts("handling publish cast")
-    IO.inspect(pub_map)
+    # IO.puts("handling publish cast")
+    # IO.inspect(pub_map)
     AMQP.Basic.publish(chan, @exchange, "", Poison.encode!(pub_map));
 
     {:noreply, chan}
@@ -63,13 +63,7 @@ defmodule Websocket.AMQPConsumer do
     :ok = Basic.ack chan, tag
     IO.puts("consumed")
     IO.puts("payload" <> payload)
-
     msg_map = Poison.decode!(payload)
-    IO.inspect(msg_map)
-    IO.puts(msg_map["registry_key"])
-    Registry.MyWebsocketApp
-    |> Registry.lookup(msg_map["registry_key"])
-    |> IO.inspect()
 
     Registry.MyWebsocketApp
     |> Registry.dispatch(msg_map["registry_key"], fn(entries) ->
@@ -77,8 +71,6 @@ defmodule Websocket.AMQPConsumer do
       # e.g. /ws/chat/3
       for {pid, _} <- entries do
         if pid != :erlang.list_to_pid(msg_map["sender_pid"]) do
-        # if pid != self() do
-          # send the message to the process..
           IO.puts("wtf...")
           Process.send(pid, msg_map["message"], [])
         end
@@ -92,40 +84,5 @@ defmodule Websocket.AMQPConsumer do
 
     {:ok, _} = Queue.declare(chan, @queue, durable: true)
     :ok = Queue.bind(chan, @queue, @exchange)
-    # {:ok, _} = Queue.declare(chan, @queue, durable: true)
-    # Messages that cannot be delivered to any consumer in the main queue will be routed to the error queue
-    # {:ok, _} = Queue.declare(chan, @queue,
-    #                          durable: true,
-    #                          arguments: [
-    #                            {"x-dead-letter-exchange", :longstr, ""},
-    #                            {"x-dead-letter-routing-key", :longstr, @queue_error}
-    #                          ]
-    #                         )
-    # :ok = Exchange.fanout(chan, @exchange, durable: true)
-    # :ok = Queue.bind(chan, @queue, @exchange)
   end
-
-  # defp consume(channel, tag, redelivered, payload) do
-    # number = String.to_integer(payload)
-    # IO.puts "consumed a #{payload}"
-    # if number <= 10 do
-    #   :ok = Basic.ack channel, tag
-    #   IO.puts "Consumed a #{number}."
-    # else
-    #   :ok = Basic.reject channel, tag, requeue: false
-    #   IO.puts "#{number} is too big and was rejected."
-    # end
-
-  # rescue
-  #   # Requeue unless it's a redelivered message.
-  #   # This means we will retry consuming a message once in case of exception
-  #   # before we give up and have it moved to the error queue
-  #   #
-  #   # You might also want to catch :exit signal in production code.
-  #   # Make sure you call ack, nack or reject otherwise comsumer will stop
-  #   # receiving messages.
-  #   exception ->
-  #     :ok = Basic.reject channel, tag, requeue: not redelivered
-  #     IO.puts "Error converting #{payload} to integer"
-  # end
 end
