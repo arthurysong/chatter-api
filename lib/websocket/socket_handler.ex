@@ -9,7 +9,7 @@ defmodule Websocket.SocketHandler do
   end
 
   def websocket_init(state) do
-    IO.puts("when do i get called...")
+    # IO.puts("when do i get called...")
 
     Registry.MyWebsocketApp
     |> Registry.register(state.registry_key, {})

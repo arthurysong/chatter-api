@@ -24,6 +24,7 @@ defmodule Websocket.MixProject do
   defp deps do
     [
       {:gen_registry, "~> 1.0"},
+      {:uuid, "~> 1.1"},
       {:plug_cowboy, "~> 2.0"},
       {:poison, "~> 3.1"},
       {:cowboy, "~> 2.4"},

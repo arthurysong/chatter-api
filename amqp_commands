@@ -1,0 +1,11 @@
+{:ok, conn} = AMQP.Connection.open
+{:ok, chan} = AMQP.Channel.open(conn)
+AMQP.Basic.publish chan, "chatter_test_exchange", "", "fuck you"
+
+AMQP.Queue.declare(chan, "chatter_test_queue")
+{:ok, payload, meta} = AMQP.Basic.get(chan, "test_queue")
+
+{:ok, conn} = AMQP.Connection.open
+{:ok, chan} = AMQP.Channel.open(conn)
+{:ok, payload, meta} = AMQP.Basic.get(chan, "chatter_test_queue")
+

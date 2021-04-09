@@ -13,7 +13,10 @@ defmodule Websocket.AMQPConsumer do
   @queue       "chatter_test_queue"
   # @queue_error "#{@queue}_error"
 
+  IO.puts(@queue)
+
   def init(_opts) do
+    IO.puts("queue" <> @queue)
     # a connection is a tcp connection to interact with RabbitMQ...
     {:ok, conn} = Connection.open("amqp://guest:guest@localhost")
     # channels are a lightweight conncetion that share a single TCP connection...
@@ -24,8 +27,11 @@ defmodule Websocket.AMQPConsumer do
     :ok = Basic.qos(chan, prefetch_count: 10)
 
     # IO.puts("genserver started and amqp connection init")
+
+    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    IO.puts("queue_uniq" <> queue_uniq)
     # Register the GenServer process as a consumer
-    {:ok, _consumer_tag} = Basic.consume(chan, @queue)
+    {:ok, _consumer_tag} = Basic.consume(chan, queue_uniq)
     {:ok, chan}
   end
 
@@ -64,6 +70,8 @@ defmodule Websocket.AMQPConsumer do
     IO.puts("consumed")
     IO.puts("payload" <> payload)
     msg_map = Poison.decode!(payload)
+    IO.inspect :erlang.list_to_pid(msg_map["sender_pid"])
+    IO.inspect(self())
 
     Registry.MyWebsocketApp
     |> Registry.dispatch(msg_map["registry_key"], fn(entries) ->
@@ -82,7 +90,9 @@ defmodule Websocket.AMQPConsumer do
   defp setup_queue(chan) do
     AMQP.Exchange.declare(chan, @exchange, :fanout, durable: true)
 
-    {:ok, _} = Queue.declare(chan, @queue, durable: true)
-    :ok = Queue.bind(chan, @queue, @exchange)
+    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+
+    {:ok, _} = Queue.declare(chan, queue_uniq, durable: true)
+    :ok = Queue.bind(chan, queue_uniq, @exchange)
   end
 end
