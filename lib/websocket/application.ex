@@ -22,6 +22,9 @@ defmodule Websocket.Application do
           dispatch: dispatch()
         ]
       },
+      {
+        Websocket.AMQPConsumer, []
+      },
       # {Websocket.Counter, 0},
       Registry.child_spec(
         keys: :duplicate,
