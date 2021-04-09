@@ -13,23 +13,17 @@ defmodule Websocket.Application do
 
     children = [
       # Starts a worker by calling: Websocket.Worker.start_link(arg)
-      # {Websocket.Worker, arg}
       {
         Plug.Cowboy, scheme: :http, plug: Websocket.Router, options: [
           # port: 4000,
-          # port: Application.fetch_env!(:websocket, :port),
           port: 4000,
           dispatch: dispatch()
         ]
       },
-      # {
-      #   GenRegistry, worker_module: Websocket.AMQPConsumer
-      # },
       {
 
         Websocket.AMQPConsumer, []
       },
-      # {Websocket.Counter, 0},
       Registry.child_spec(
         keys: :duplicate,
         name: Registry.MyWebsocketApp
