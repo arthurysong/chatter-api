@@ -6,7 +6,7 @@ defmodule Websocket.AMQPConsumer do
   use AMQP
 
   def start_link(initial_val) do
-    GenServer.start_link(__MODULE__, initial_val)
+    GenServer.start_link(__MODULE__, initial_val, name: :amqp)
   end
 
   @exchange    "chatter_test_exchange"
@@ -14,7 +14,9 @@ defmodule Websocket.AMQPConsumer do
   @queue_error "#{@queue}_error"
 
   def init(_opts) do
+    # a connection is a tcp connection to interact with RabbitMQ...
     {:ok, conn} = Connection.open("amqp://guest:guest@localhost")
+    # channels are a lightweight conncetion that share a single TCP connection...
     {:ok, chan} = Channel.open(conn)
     setup_queue(chan)
 
@@ -25,6 +27,19 @@ defmodule Websocket.AMQPConsumer do
     # Register the GenServer process as a consumer
     {:ok, _consumer_tag} = Basic.consume(chan, @queue)
     {:ok, chan}
+  end
+
+  def handle_call({:get_state}, _from, chan) do
+    IO.puts("handling call in genserver")
+    {:reply, :erlang.pid_to_list(self()), chan}
+  end
+
+  def handle_cast({:publish, pub_map}, chan) do
+    IO.puts("handling publish cast")
+    IO.inspect(pub_map)
+    AMQP.Basic.publish(chan, @exchange, "", Poison.encode!(pub_map));
+
+    {:noreply, chan}
   end
 
   # Confirmation sent by the broker after registering this process as a consumer

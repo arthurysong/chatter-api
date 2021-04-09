@@ -22,7 +22,11 @@ defmodule Websocket.Application do
           dispatch: dispatch()
         ]
       },
+      # {
+      #   GenRegistry, worker_module: Websocket.AMQPConsumer
+      # },
       {
+
         Websocket.AMQPConsumer, []
       },
       # {Websocket.Counter, 0},

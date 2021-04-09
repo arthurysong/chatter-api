@@ -11,18 +11,29 @@ defmodule Websocket.SocketHandler do
     IO.puts("request.path" <> request.path)
     IO.inspect state
 
+    # {:ok, pid} = Gen
+    # IO.puts(GenServer.call(:amqp, {:get_state}))
+    # we have the genserver now... now we just need to do handle cast to send msg...
+
+    # case
+    # case GenRegistry.lookup(Websocket.AMQPConsumer, MyAMQP) do
+    #   {:ok, pid} ->
+    #     IO.puts("this is the pid of AMQP genserver #{pid}")
+    #   {:error, :not_found} ->
+    #     IO.puts("the genserver was not found")
+    # end
     # what if this goes in genserver instead?
     # a connection is a tcp connection to interact with RabbitMQ...
-    {:ok, conn} = AMQP.Connection.open
+    # {:ok, conn} = AMQP.Connection.open
 
     # channels are a lightweight conncetion that share a single TCP connection...
-    {:ok, channel} = AMQP.Channel.open(conn)
+    # {:ok, channel} = AMQP.Channel.open(conn)
 
 
-    setup_queue(channel)
+    # setup_queue(channel)
     # {:ok, _consumer_tag} = Basic.consume(channel, @queue)
 
-    state = Map.put(state, :channel, channel);
+    # state = Map.put(state, :channel, channel);
     {:cowboy_websocket, request, state}
   end
 
@@ -53,8 +64,9 @@ defmodule Websocket.SocketHandler do
       message: message
     }
 
+    GenServer.cast(:amqp, {:publish, pub_map})
     # what if instead i send pub_map to genserver and genserver handles publishing instead of opening a channel here...
-    AMQP.Basic.publish(state.channel, @exchange, "", Poison.encode!(pub_map));
+    # AMQP.Basic.publish(state.channel, @exchange, "", Poison.encode!(pub_map));
 
     {:reply, {:text, message}, state}
   end

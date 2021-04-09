@@ -1342,3 +1342,220 @@
 2021-04-08 15:27:56.374 [info] <0.44.0> Application amqp started on node nonode@nohost
 2021-04-08 15:27:56.396 [warning] <0.444.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
 2021-04-08 15:27:56.434 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:04:18.909 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:04:18.911 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:04:18.914 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:04:18.914 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:04:18.914 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:04:18.914 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:04:18.949 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:04:18.949 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:04:18.956 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:04:18.957 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:04:18.973 [error] <0.343.0> CRASH REPORT Process <0.343.0> with 0 neighbours exited with reason: #{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"The module GenRegistry was given as a child to a supervisor but it does not exist.">>} in 'Elixir.Supervisor':init_child/1 line 631 in application_master:init/4 line 138
+2021-04-08 17:04:59.109 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:04:59.110 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:04:59.113 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:04:59.113 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:04:59.113 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:04:59.113 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:04:59.152 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:04:59.152 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:04:59.157 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:04:59.160 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:04:59.169 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:06:51.152 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:06:51.156 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:06:51.164 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:06:51.164 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:06:51.164 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:06:51.164 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:06:51.213 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:06:51.213 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:06:51.218 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:06:51.222 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:06:51.254 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:06:55.201 [error] <0.446.0>@Elixir.GenRegistry:lookup CRASH REPORT Process <0.446.0> with 0 neighbours crashed with reason: call to undefined function 'Elixir.GenRegistry':lookup('Elixir.Websocket.AMQPConsumer')
+2021-04-08 17:06:55.207 [error] <0.446.0>@Elixir.GenRegistry:lookup Cowboy stream 1 with ranch listener 'Elixir.Websocket.Router.HTTP' and connection process <0.445.0> had its request process exit with reason: call to undefined function 'Elixir.GenRegistry':lookup('Elixir.Websocket.AMQPConsumer')
+2021-04-08 17:09:26.057 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:09:26.059 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:09:26.062 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:09:26.062 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:09:26.062 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:09:26.062 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:09:26.099 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:09:26.099 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:09:26.104 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:09:26.106 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:09:26.124 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:14:11.857 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:14:11.860 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:14:11.870 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:14:11.871 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:14:11.871 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:14:11.872 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:14:11.918 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:14:11.918 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:14:11.925 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:14:11.929 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:14:11.953 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:15:52.620 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:15:52.622 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:15:52.638 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:15:52.638 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:15:52.638 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:15:52.638 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:15:52.787 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:15:52.787 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:15:52.820 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:15:52.841 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:15:52.911 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:16:01.251 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:16:01.253 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:16:01.256 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:16:01.256 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:16:01.256 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:16:01.256 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:16:01.301 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:16:01.302 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:16:01.317 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:16:01.320 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:16:01.365 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:18:45.042 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:18:45.044 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:18:45.046 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:18:45.046 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:18:45.046 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:18:45.046 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:18:45.083 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:18:45.083 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:18:45.091 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:18:45.093 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:18:45.115 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:24:43.992 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:24:44.023 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:24:44.023 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:24:44.023 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:24:44.023 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:24:44.023 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:24:44.087 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:24:44.087 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:24:44.098 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:24:44.109 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:24:44.149 [error] <0.324.0> Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4000}]) for reason eaddrinuse (address already in use)
+2021-04-08 17:24:44.182 [error] <0.322.0> Supervisor {<0.322.0>,ranch_listener_sup} had child ranch_acceptors_sup started with ranch_acceptors_sup:start_link('Elixir.Websocket.Router.HTTP', ranch_tcp) at undefined exit with reason {listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse} in context start_error
+2021-04-08 17:24:44.182 [error] <0.324.0> CRASH REPORT Process <0.324.0> with 0 neighbours exited with reason: {listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse} in ranch_acceptors_sup:listen_error/5 line 66
+2021-04-08 17:25:11.722 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:25:11.724 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:25:11.728 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:25:11.728 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:25:11.728 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:25:11.728 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:25:11.768 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:25:11.768 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:25:11.772 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:25:11.781 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:25:11.809 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:28:26.735 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:28:26.737 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:28:26.744 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:28:26.745 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:28:26.745 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:28:26.746 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:28:26.796 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:28:26.798 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:28:26.814 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:28:26.827 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:28:26.917 [warning] <0.451.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-08 17:28:26.999 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:28:31.490 [error] <0.451.0> gen_server amqp terminated with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777
+2021-04-08 17:28:31.511 [error] <0.451.0> CRASH REPORT Process amqp with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777
+2021-04-08 17:28:31.512 [error] <0.347.0> Supervisor 'Elixir.Websocket.Supervisor' had child 'Elixir.Websocket.AMQPConsumer' started with 'Elixir.Websocket.AMQPConsumer':start_link([]) at <0.451.0> exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777 in context child_terminated
+2021-04-08 17:28:31.512 [error] <0.473.0> CRASH REPORT Process <0.473.0> with 0 neighbours exited with reason: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>},[{'Elixir.Websocket.AMQPConsumer',handle_call,3,[{file,"lib/gen_server.ex"},{line,777}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,715}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},{'Elixir.GenServer',call,[amqp,{get_state},5000]}} in 'Elixir.GenServer':call/3 line 1027 in 'Elixir.GenServer':call/3 line 1027
+2021-04-08 17:28:31.519 [error] <0.473.0> Cowboy stream 1 with ranch listener 'Elixir.Websocket.Router.HTTP' and connection process <0.472.0> had its request process exit with reason: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>},[{'Elixir.Websocket.AMQPConsumer',handle_call,3,[{file,"lib/gen_server.ex"},{line,777}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,715}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},{'Elixir.GenServer',call,[amqp,{get_state},5000]}} in 'Elixir.GenServer':call/3 line 1027
+2021-04-08 17:31:26.306 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:31:26.308 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:31:26.311 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:31:26.311 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:31:26.311 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:31:26.311 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:31:26.347 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:31:26.348 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:31:26.353 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:31:26.355 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:31:26.381 [warning] <0.441.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-08 17:31:26.425 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:31:29.421 [error] <0.441.0> gen_server amqp terminated with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777
+2021-04-08 17:31:29.429 [error] <0.441.0> CRASH REPORT Process amqp with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777
+2021-04-08 17:31:29.430 [error] <0.337.0> Supervisor 'Elixir.Websocket.Supervisor' had child 'Elixir.Websocket.AMQPConsumer' started with 'Elixir.Websocket.AMQPConsumer':start_link([]) at <0.441.0> exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777 in context child_terminated
+2021-04-08 17:31:29.430 [error] <0.463.0> CRASH REPORT Process <0.463.0> with 0 neighbours exited with reason: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>},[{'Elixir.Websocket.AMQPConsumer',handle_call,3,[{file,"lib/gen_server.ex"},{line,777}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,715}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},{'Elixir.GenServer',call,[amqp,{get_state},5000]}} in 'Elixir.GenServer':call/3 line 1027 in 'Elixir.GenServer':call/3 line 1027
+2021-04-08 17:31:29.442 [error] <0.463.0> Cowboy stream 1 with ranch listener 'Elixir.Websocket.Router.HTTP' and connection process <0.462.0> had its request process exit with reason: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>},[{'Elixir.Websocket.AMQPConsumer',handle_call,3,[{file,"lib/gen_server.ex"},{line,777}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,715}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},{'Elixir.GenServer',call,[amqp,{get_state},5000]}} in 'Elixir.GenServer':call/3 line 1027
+2021-04-08 17:32:06.107 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:32:06.109 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:32:06.111 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:32:06.111 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:32:06.111 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:32:06.111 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:32:06.147 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:32:06.147 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:32:06.154 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:32:06.164 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:32:06.190 [warning] <0.441.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-08 17:32:06.231 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:32:07.508 [error] <0.441.0> gen_server amqp terminated with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777
+2021-04-08 17:32:07.516 [error] <0.441.0> CRASH REPORT Process amqp with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777
+2021-04-08 17:32:07.517 [error] <0.337.0> Supervisor 'Elixir.Websocket.Supervisor' had child 'Elixir.Websocket.AMQPConsumer' started with 'Elixir.Websocket.AMQPConsumer':start_link([]) at <0.441.0> exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>} in 'Elixir.Websocket.AMQPConsumer':handle_call/3 line 777 in context child_terminated
+2021-04-08 17:32:07.517 [error] <0.463.0> CRASH REPORT Process <0.463.0> with 0 neighbours exited with reason: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>},[{'Elixir.Websocket.AMQPConsumer',handle_call,3,[{file,"lib/gen_server.ex"},{line,777}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,715}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},{'Elixir.GenServer',call,[amqp,{get_state},5000]}} in 'Elixir.GenServer':call/3 line 1027 in 'Elixir.GenServer':call/3 line 1027
+2021-04-08 17:32:07.521 [error] <0.463.0> Cowboy stream 1 with ranch listener 'Elixir.Websocket.Router.HTTP' and connection process <0.462.0> had its request process exit with reason: {{#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer :amqp but no handle_call/3 clause was provided">>},[{'Elixir.Websocket.AMQPConsumer',handle_call,3,[{file,"lib/gen_server.ex"},{line,777}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,715}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]},{'Elixir.GenServer',call,[amqp,{get_state},5000]}} in 'Elixir.GenServer':call/3 line 1027
+2021-04-08 17:32:51.092 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:32:51.093 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:32:51.097 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:32:51.097 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:32:51.097 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:32:51.097 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:32:51.145 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:32:51.145 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:32:51.155 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:32:51.160 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:32:51.198 [warning] <0.441.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-08 17:32:51.284 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:32:55.632 [error] <0.463.0> CRASH REPORT Process <0.463.0> with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => <0.441.0>} in 'Elixir.String.Chars':'impl_for!'/1 line 3
+2021-04-08 17:32:55.639 [error] <0.463.0> Cowboy stream 1 with ranch listener 'Elixir.Websocket.Router.HTTP' and connection process <0.462.0> had its request process exit with reason: #{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => <0.441.0>} in 'Elixir.String.Chars':'impl_for!'/1 line 3
+2021-04-08 17:33:27.585 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:33:27.589 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:33:27.592 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:33:27.592 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:33:27.592 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:33:27.592 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:33:27.635 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:33:27.637 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:33:27.646 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:33:27.651 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:33:27.683 [warning] <0.441.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-08 17:33:27.760 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:33:29.343 [error] <0.463.0>@Elixir.GenRegistry:lookup:74 CRASH REPORT Process <0.463.0> with 0 neighbours crashed with reason: bad argument in call to ets:lookup('Elixir.Websocket.AMQPConsumer', 'Elixir.MyAMQP') in 'Elixir.GenRegistry':lookup/2 line 74
+2021-04-08 17:33:29.346 [error] <0.463.0>@Elixir.GenRegistry:lookup:74 Cowboy stream 1 with ranch listener 'Elixir.Websocket.Router.HTTP' and connection process <0.462.0> had its request process exit with reason: bad argument in call to ets:lookup('Elixir.Websocket.AMQPConsumer', 'Elixir.MyAMQP') in 'Elixir.GenRegistry':lookup/2 line 74
+2021-04-08 17:38:29.598 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:38:29.600 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:38:29.604 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:38:29.604 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:38:29.604 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:38:29.604 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:38:29.643 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:38:29.643 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:38:29.649 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:38:29.651 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:38:29.676 [warning] <0.446.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-08 17:38:29.719 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-08 17:39:22.746 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-08 17:39:22.749 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-08 17:39:22.753 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-08 17:39:22.753 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-08 17:39:22.753 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-08 17:39:22.753 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-08 17:39:22.792 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-08 17:39:22.792 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-08 17:39:22.800 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-08 17:39:22.811 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-08 17:39:22.836 [warning] <0.446.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-08 17:39:22.889 [info] <0.44.0> Application websocket started on node nonode@nohost
