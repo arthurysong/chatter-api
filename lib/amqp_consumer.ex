@@ -67,11 +67,11 @@ defmodule Websocket.AMQPConsumer do
     # You might want to run payload consumption in separate Tasks in production
     # consume(chan, tag, redelivered, payload)
     :ok = Basic.ack chan, tag
-    IO.puts("consumed")
-    IO.puts("payload" <> payload)
+    # IO.puts("consumed")
+    # IO.puts("payload" <> payload)
     msg_map = Poison.decode!(payload)
-    IO.inspect :erlang.list_to_pid(msg_map["sender_pid"])
-    IO.inspect(self())
+    # IO.inspect :erlang.list_to_pid(msg_map["sender_pid"])
+    # IO.inspect(self())
 
     Registry.MyWebsocketApp
     |> Registry.dispatch(msg_map["registry_key"], fn(entries) ->
@@ -79,7 +79,6 @@ defmodule Websocket.AMQPConsumer do
       # e.g. /ws/chat/3
       for {pid, _} <- entries do
         if pid != :erlang.list_to_pid(msg_map["sender_pid"]) do
-          IO.puts("wtf...")
           Process.send(pid, msg_map["message"], [])
         end
       end

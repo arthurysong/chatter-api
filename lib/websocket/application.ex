@@ -15,8 +15,8 @@ defmodule Websocket.Application do
       # Starts a worker by calling: Websocket.Worker.start_link(arg)
       {
         Plug.Cowboy, scheme: :http, plug: Websocket.Router, options: [
-          port: 4000,
-          # port: 4001,
+          # port: 4000,
+          port: 4001,
           dispatch: dispatch()
         ]
       },

@@ -3,13 +3,16 @@ defmodule Websocket.SocketHandler do
 
   def init(request, _state) do
     state = %{registry_key: request.path}
-    # IO.puts("request.path" <> request.path)
-    # IO.inspect state
+    resp = HTTPoison.get! "https://httpbin.org/ip"
+    body = Poison.decode!(resp.body);
+    state = Map.put(state, :machine_ip, body["origin"])
     {:cowboy_websocket, request, state}
   end
 
   def websocket_init(state) do
     # IO.puts("when do i get called...")
+    # IO.inspect (:inet.getif())
+    # IO.puts("ip" <> :inet.getif())
 
     Registry.MyWebsocketApp
     |> Registry.register(state.registry_key, {})
@@ -29,6 +32,8 @@ defmodule Websocket.SocketHandler do
     # message = payload["data"]["message"]
     # IO.puts("message" <> message)
     # IO.inspect data
+    data = Map.put(data, :machine_ip, state.machine_ip)
+
     encode = Poison.encode!(data)
 
     pub_map = %{
