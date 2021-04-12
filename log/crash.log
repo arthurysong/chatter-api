@@ -2287,3 +2287,79 @@ Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:liste
     stack_size: 28
     reductions: 234
   neighbours:
+2021-04-12 14:50:29 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.463.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Ethelind">>}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.340.0>,<0.339.0>,'Elixir.Websocket.Supervisor',<0.337.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.460.0>,#Port<0.9>,<0.340.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 3481
+  neighbours:
+2021-04-12 14:50:29 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.463.0> exit with reason: {badarg,[{erlang,iolist_size,[#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Ethelind">>}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 14:50:55 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.463.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Selene">>}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.340.0>,<0.339.0>,'Elixir.Websocket.Supervisor',<0.337.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.460.0>,#Port<0.9>,<0.340.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 4179
+  neighbours:
+2021-04-12 14:50:55 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.463.0> exit with reason: {badarg,[{erlang,iolist_size,[#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Selene">>}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 14:51:20 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.465.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Talya">>}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.340.0>,<0.339.0>,'Elixir.Websocket.Supervisor',<0.337.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.460.0>,#Port<0.10>,<0.340.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 3789
+  neighbours:
+2021-04-12 14:51:20 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.465.0> exit with reason: {badarg,[{erlang,iolist_size,[#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Talya">>}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 14:52:14 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.463.0>
+    registered_name: []
+    exception error: {function_clause,[{cow_ws,frame,[{text,<<"Hello server!">>,<<"Aigneis">>},#{}],[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,633}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.340.0>,<0.339.0>,'Elixir.Websocket.Supervisor',<0.337.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.460.0>,#Port<0.9>,<0.340.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 4160
+  neighbours:
+2021-04-12 14:52:14 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.463.0> exit with reason: {function_clause,[{cow_ws,frame,[{text,<<"Hello server!">>,<<"Aigneis">>},#{}],[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,633}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}

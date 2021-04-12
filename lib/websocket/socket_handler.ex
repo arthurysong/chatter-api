@@ -20,21 +20,26 @@ defmodule Websocket.SocketHandler do
 
     {:ok, state}
   end
+
   def websocket_handle({:text, json}, state) do
     IO.inspect state
     payload = Poison.decode!(json)
-    message = payload["data"]["message"]
-    IO.puts("message" <> message)
+    data = payload["data"]
+    # user = data["user"]
+    # message = payload["data"]["message"]
+    # IO.puts("message" <> message)
+    # IO.inspect data
+    encode = Poison.encode!(data)
 
     pub_map = %{
       registry_key: state.registry_key,
       sender_pid: :erlang.pid_to_list(self()),
-      message: message
+
+      message: encode
     }
 
     GenServer.cast(:amqp, {:publish, pub_map})
-
-    {:reply, {:text, message}, state}
+    {:reply, {:text, encode}, state}
   end
 
 

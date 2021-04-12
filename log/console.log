@@ -1803,3 +1803,95 @@
 2021-04-09 11:11:36.736 [info] <0.44.0> Application amqp started on node nonode@nohost
 2021-04-09 11:11:36.774 [warning] <0.441.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
 2021-04-09 11:11:36.855 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-12 13:31:10.908 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-12 13:31:10.910 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-12 13:31:10.913 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-12 13:31:10.913 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-12 13:31:10.913 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-12 13:31:10.913 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-12 13:31:10.964 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-12 13:31:10.965 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-12 13:31:10.972 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-12 13:31:10.984 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-12 13:31:11.035 [warning] <0.442.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-12 13:31:11.120 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-12 13:35:21.112 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-12 13:35:21.114 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-12 13:35:21.116 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-12 13:35:21.116 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-12 13:35:21.116 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-12 13:35:21.116 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-12 13:35:21.153 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-12 13:35:21.153 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-12 13:35:21.158 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-12 13:35:21.159 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-12 13:35:21.183 [warning] <0.441.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-12 13:35:21.221 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-12 14:50:21.724 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-12 14:50:21.725 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-12 14:50:21.728 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-12 14:50:21.728 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-12 14:50:21.728 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-12 14:50:21.728 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-12 14:50:21.766 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-12 14:50:21.766 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-12 14:50:21.775 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-12 14:50:21.778 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-12 14:50:21.807 [warning] <0.442.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-12 14:50:21.855 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-12 14:50:29.864 [error] <0.463.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.463.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size(#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Ethelind">>}) in cow_ws:payload_length/1 line 725
+2021-04-12 14:50:29.864 [error] <0.463.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size(#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Ethelind">>}) in cow_ws:payload_length/1 line 725
+2021-04-12 14:50:50.409 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-12 14:50:50.410 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-12 14:50:50.413 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-12 14:50:50.413 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-12 14:50:50.413 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-12 14:50:50.413 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-12 14:50:50.455 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-12 14:50:50.455 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-12 14:50:50.462 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-12 14:50:50.464 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-12 14:50:50.493 [warning] <0.442.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-12 14:50:50.588 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-12 14:50:55.469 [error] <0.463.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.463.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size(#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Selene">>}) in cow_ws:payload_length/1 line 725
+2021-04-12 14:50:55.471 [error] <0.463.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size(#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Selene">>}) in cow_ws:payload_length/1 line 725
+2021-04-12 14:51:20.330 [error] <0.465.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.465.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size(#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Talya">>}) in cow_ws:payload_length/1 line 725
+2021-04-12 14:51:20.330 [error] <0.465.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size(#{<<"message">> => <<"Hello server!">>,<<"user">> => <<"Talya">>}) in cow_ws:payload_length/1 line 725
+2021-04-12 14:52:10.745 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-12 14:52:10.746 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-12 14:52:10.749 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-12 14:52:10.750 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-12 14:52:10.750 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-12 14:52:10.750 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-12 14:52:10.787 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-12 14:52:10.787 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-12 14:52:10.792 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-12 14:52:10.796 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-12 14:52:10.820 [warning] <0.442.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-12 14:52:10.860 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-12 14:52:14.582 [error] <0.463.0>@cow_ws:frame:633 CRASH REPORT Process <0.463.0> with 0 neighbours crashed with reason: no function clause matching cow_ws:frame({text,<<"Hello server!">>,<<"Aigneis">>}, #{}) line 633
+2021-04-12 14:52:14.583 [error] <0.463.0>@cow_ws:frame:633 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: no function clause matching cow_ws:frame({text,<<"Hello server!">>,<<"Aigneis">>}, #{}) line 633
+2021-04-12 14:55:20.646 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-12 14:55:20.647 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-12 14:55:20.650 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-12 14:55:20.651 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-12 14:55:20.651 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-12 14:55:20.651 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-12 14:55:20.690 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-12 14:55:20.690 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-12 14:55:20.696 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-12 14:55:20.698 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-12 14:55:20.731 [warning] <0.442.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-12 14:55:20.776 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-12 14:56:10.253 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-12 14:56:10.255 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-12 14:56:10.258 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-12 14:56:10.258 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-12 14:56:10.258 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-12 14:56:10.258 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-12 14:56:10.298 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-12 14:56:10.298 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-12 14:56:10.306 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-12 14:56:10.316 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-12 14:56:10.345 [warning] <0.442.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-12 14:56:10.382 [info] <0.44.0> Application websocket started on node nonode@nohost
