@@ -17,11 +17,14 @@ defmodule Websocket.AMQPConsumer do
 
   def init(_opts) do
     IO.puts("queue" <> @queue)
+    IO.puts(System.get_env("APP_ID"))
     # a connection is a tcp connection to interact with RabbitMQ...
     # {:ok, conn} = Connection.open("amqp://guest:guest@localhost")
     IO.puts("host" <> Application.fetch_env!(:websocket, :rabbitmq_host))
     # {:ok, conn} = Connection.open("amqp://test:test@" <> Application.fetch_env!(:websocket, :rabbitmq_host))
     # {:ok, conn} = Connection.open("amqp://test:test@internal-rabbitmq-1546572793.us-west-1.elb.amazonaws.com")
+
+    # this is our load balancer...
     {:ok, conn} = Connection.open("amqp://test:test@rmq-791691136.us-west-1.elb.amazonaws.com:5672")
     # {:ok, conn} = Connection.open("amqp://test:test@13.57.218.23")
 
@@ -36,7 +39,8 @@ defmodule Websocket.AMQPConsumer do
 
     # IO.puts("genserver started and amqp connection init")
 
-    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    # queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    queue_uniq = @queue <> System.get_env("APP_ID")
     IO.puts("queue_uniq" <> queue_uniq)
     # Register the GenServer process as a consumer
     {:ok, _consumer_tag} = Basic.consume(chan, queue_uniq)
@@ -97,7 +101,7 @@ defmodule Websocket.AMQPConsumer do
   defp setup_queue(chan) do
     AMQP.Exchange.declare(chan, @exchange, :fanout, durable: true)
 
-    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    queue_uniq = @queue <> System.get_env("APP_ID")
 
     {:ok, _} = Queue.declare(chan, queue_uniq, durable: true)
     :ok = Queue.bind(chan, queue_uniq, @exchange)

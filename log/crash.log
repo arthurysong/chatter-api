@@ -3995,3 +3995,49 @@ Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:liste
     stack_size: 28
     reductions: 232
   neighbours:
+2021-04-13 12:16:43 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :APP_ID for application :websocket because configuration at :APP_ID was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,20}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-13 12:16:43 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :APP_ID for application :websocket because configuration at :APP_ID was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,20}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 495
+  neighbours:
+2021-04-13 12:16:43 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :APP_ID for application :websocket because configuration at :APP_ID was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,20}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-13 12:22:13 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    child_terminated
+     Reason:     normal
+     Offender:   [{pid,<0.472.0>},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+

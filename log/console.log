@@ -2731,3 +2731,111 @@
 2021-04-12 21:06:22.142 [info] <0.44.0> Application amqp started on node nonode@nohost
 2021-04-12 21:06:22.164 [warning] <0.457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
 2021-04-12 21:06:22.544 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:00:53.933 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:00:53.939 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:00:53.942 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:00:53.942 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:00:53.942 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:00:53.942 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:00:54.002 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:00:54.002 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:00:54.052 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:00:54.056 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:00:54.110 [warning] <0.472.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:00:54.472 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:01:59.232 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:01:59.233 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:01:59.237 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:01:59.237 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:01:59.237 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:01:59.237 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:01:59.273 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:01:59.273 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:01:59.277 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:01:59.279 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:01:59.316 [warning] <0.471.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:01:59.678 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:13:56.965 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:13:56.967 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:13:56.971 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:13:56.971 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:13:56.971 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:13:56.971 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:13:57.010 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:13:57.010 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:13:57.017 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:13:57.023 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:13:57.071 [warning] <0.457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:13:57.414 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:14:14.746 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:14:14.748 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:14:14.753 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:14:14.754 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:14:14.754 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:14:14.754 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:14:14.791 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:14:14.791 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:14:14.797 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:14:14.799 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:14:14.822 [warning] <0.457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:14:15.178 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:14:27.467 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:14:27.469 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:14:27.471 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:14:27.472 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:14:27.472 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:14:27.472 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:14:27.508 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:14:27.508 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:14:27.514 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:14:27.516 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:14:27.538 [warning] <0.457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:14:27.882 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:14:36.271 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:14:36.273 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:14:36.276 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:14:36.276 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:14:36.276 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:14:36.276 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:14:36.318 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:14:36.318 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:14:36.332 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:14:36.335 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:14:36.358 [warning] <0.457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:14:36.686 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:16:43.293 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:16:43.295 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:16:43.298 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:16:43.298 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:16:43.298 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:16:43.298 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:16:43.345 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:16:43.345 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:16:43.350 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:16:43.352 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:16:43.363 [error] <0.428.0> Supervisor 'Elixir.Websocket.Supervisor' had child 'Elixir.Websocket.AMQPConsumer' started with 'Elixir.Websocket.AMQPConsumer':start_link([]) at undefined exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :APP_ID for application :websocket because configuration at :APP_ID was not set">>} in 'Elixir.Application':'fetch_env!'/2 line 656 in context start_error
+2021-04-13 12:17:43.888 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:17:43.889 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:17:43.893 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:17:43.893 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:17:43.893 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:17:43.893 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:17:43.935 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:17:43.935 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:17:43.946 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:17:43.951 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:17:43.992 [warning] <0.472.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:17:44.313 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:19:07.990 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 12:19:07.991 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 12:19:07.995 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 12:19:07.995 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 12:19:07.995 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 12:19:07.995 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 12:19:08.035 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 12:19:08.035 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 12:19:08.043 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 12:19:08.045 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 12:19:08.073 [warning] <0.472.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 12:19:08.450 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 12:22:13.808 [error] <0.368.0> Supervisor 'Elixir.Websocket.Supervisor' had child 'Elixir.Websocket.AMQPConsumer' started with 'Elixir.Websocket.AMQPConsumer':start_link([]) at <0.472.0> exit with reason normal in context child_terminated
