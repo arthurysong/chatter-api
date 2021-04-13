@@ -20,7 +20,7 @@ defmodule Websocket.AMQPConsumer do
     IO.puts(System.get_env("APP_ID"))
     # a connection is a tcp connection to interact with RabbitMQ...
     # {:ok, conn} = Connection.open("amqp://guest:guest@localhost")
-    IO.puts("host" <> Application.fetch_env!(:websocket, :rabbitmq_host))
+    # IO.puts("host" <> Application.fetch_env!(:websocket, :rabbitmq_host))
     # {:ok, conn} = Connection.open("amqp://test:test@" <> Application.fetch_env!(:websocket, :rabbitmq_host))
     # {:ok, conn} = Connection.open("amqp://test:test@internal-rabbitmq-1546572793.us-west-1.elb.amazonaws.com")
 

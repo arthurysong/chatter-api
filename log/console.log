@@ -2839,3 +2839,358 @@
 2021-04-13 12:19:08.073 [warning] <0.472.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
 2021-04-13 12:19:08.450 [info] <0.44.0> Application websocket started on node nonode@nohost
 2021-04-13 12:22:13.808 [error] <0.368.0> Supervisor 'Elixir.Websocket.Supervisor' had child 'Elixir.Websocket.AMQPConsumer' started with 'Elixir.Websocket.AMQPConsumer':start_link([]) at <0.472.0> exit with reason normal in context child_terminated
+2021-04-13 13:16:37.699 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.699 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.699 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.699 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.699 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.700 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:16:37.709 [error] <0.1353.0> Supervisor 'Elixir.Websocket.Supervisor' had child 'Elixir.Websocket.AMQPConsumer' started with 'Elixir.Websocket.AMQPConsumer':start_link([]) at undefined exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>} in 'Elixir.Application':'fetch_env!'/2 line 656 in context start_error
+2021-04-13 13:16:37.709 [error] <0.1351.0> CRASH REPORT Process <0.1351.0> with 0 neighbours exited with reason: {{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{...}]},...]}}},...} in application_master:init/4 line 138
+2021-04-13 13:16:37.709 [info] <0.1150.0> Application websocket exited with reason: {{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{...}]},...]}}},...}
+2021-04-13 13:17:24.489 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.489 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.489 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.489 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.489 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.490 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.491 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.492 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.493 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:17:24.496 [warning] <0.1457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:17:37.527 [info] <0.1150.0> Application websocket started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.867 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.868 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.869 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.869 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.869 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.869 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.869 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.869 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.870 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:20:45.871 [warning] <0.1457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:20:59.668 [info] <0.1150.0> Application websocket started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:25.976 [info] <0.1150.0> Application iex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:37.946 [error] <0.1617.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1617.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1611.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1611.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1623.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1623.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1591.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1591.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1605.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1605.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1620.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1620.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1626.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1626.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1602.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1602.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1614.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1614.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1629.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1629.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1599.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1599.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1608.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1608.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1596.0>@cow_ws:payload_length:725 CRASH REPORT Process <0.1596.0> with 0 neighbours crashed with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1611.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.946 [error] <0.1617.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.947 [error] <0.1623.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.947 [error] <0.1591.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.947 [error] <0.1605.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.948 [error] <0.1620.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.948 [error] <0.1626.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.948 [error] <0.1602.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.949 [error] <0.1614.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.949 [error] <0.1629.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.949 [error] <0.1599.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.950 [error] <0.1608.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:37.950 [error] <0.1596.0>@cow_ws:payload_length:725 Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: bad argument in call to erlang:iolist_size({'EXIT',<0.1481.0>,shutdown}) in cow_ws:payload_length/1 line 725
+2021-04-13 13:23:42.032 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.032 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.032 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.032 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.033 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.034 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.038 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.038 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.038 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.038 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.038 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.039 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:23:42.045 [warning] <0.1457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:23:58.736 [error] <0.1469.0> CRASH REPORT Process <0.1469.0> with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>} in 'Elixir.Registry':'info!'/1 line 1267
+2021-04-13 13:23:58.737 [error] <0.1469.0> Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: #{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>} in 'Elixir.Registry':'info!'/1 line 1267
+2021-04-13 13:23:58.822 [info] <0.1150.0> Application websocket started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.604 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.605 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.605 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.605 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.605 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.605 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.605 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.605 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.606 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.607 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.609 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.609 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.609 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.609 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.609 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.609 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:26:56.611 [warning] <0.1457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:27:11.705 [error] <0.1469.0> CRASH REPORT Process <0.1469.0> with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>} in 'Elixir.Registry':'info!'/1 line 1267
+2021-04-13 13:27:11.708 [error] <0.1469.0> Ranch listener 'Elixir.Websocket.Router.HTTP' terminated with reason: #{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>} in 'Elixir.Registry':'info!'/1 line 1267
+2021-04-13 13:27:12.984 [info] <0.1150.0> Application websocket started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.529 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.530 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.531 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:27:45.532 [warning] <0.1457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:28:04.195 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.195 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.195 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.195 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.195 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.196 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.197 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.197 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.197 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.197 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:04.198 [warning] <0.1457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:28:13.274 [info] <0.1150.0> Application websocket started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:28:47.738 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 13:28:47.739 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 13:28:47.743 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 13:28:47.743 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 13:28:47.743 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 13:28:47.743 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 13:28:47.780 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 13:28:47.780 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 13:28:47.786 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 13:28:47.787 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 13:28:47.797 [error] <0.431.0> Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4000}]) for reason eaddrinuse (address already in use)
+2021-04-13 13:29:05.459 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 13:29:05.461 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 13:29:05.465 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 13:29:05.465 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 13:29:05.465 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 13:29:05.465 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 13:29:05.503 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 13:29:05.503 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 13:29:05.510 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 13:29:05.512 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 13:29:05.540 [warning] <0.471.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:29:19.953 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 13:30:56.765 [error] <0.527.0> CRASH REPORT Process <0.527.0> with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.HTTPoison.Error',id => nil,reason => timeout} in 'Elixir.HTTPoison':'request!'/5 line 156
+2021-04-13 13:30:56.800 [error] <0.527.0> Cowboy stream 1 with ranch listener 'Elixir.Websocket.Router.HTTP' and connection process <0.526.0> had its request process exit with reason: #{'__exception__' => true,'__struct__' => 'Elixir.HTTPoison.Error',id => nil,reason => timeout} in 'Elixir.HTTPoison':'request!'/5 line 156
+2021-04-13 13:38:24.311 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.311 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.311 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.311 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.311 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.312 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.312 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.312 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.312 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.312 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.313 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.314 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.314 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.314 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:24.322 [warning] <0.1460.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:38:39.196 [info] <0.1150.0> Application websocket started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:38:39.205 [info] <0.1150.0> Application iex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.341 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.341 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.341 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.342 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.342 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.342 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.342 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.342 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.343 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.343 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.343 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.343 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.343 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.344 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.345 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.345 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.345 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:39:48.345 [error] <0.1354.0> Supervisor {<0.1354.0>,ranch_listener_sup} had child ranch_acceptors_sup started with ranch_acceptors_sup:start_link('Elixir.Websocket.Router.HTTP', ranch_tcp) at undefined exit with reason badarg in context start_error
+2021-04-13 13:39:48.345 [error] <0.1353.0> Supervisor 'Elixir.Websocket.Supervisor' had child {ranch_listener_sup,'Elixir.Websocket.Router.HTTP'} started with ranch_listener_sup:start_link('Elixir.Websocket.Router.HTTP', ranch_tcp, #{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,<<"4000">>}]}, cowboy_clear, #{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',...}]}]},...}) at undefined exit with reason {shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}} in context start_error
+2021-04-13 13:39:48.345 [error] <0.1356.0>@inet_tcp:listen:160 CRASH REPORT Process <0.1356.0> with 0 neighbours exited with reason: bad argument in inet_tcp:listen/2 line 160
+2021-04-13 13:39:48.345 [error] <0.1351.0> CRASH REPORT Process <0.1351.0> with 0 neighbours exited with reason: {{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}}}},{'Elixir.Websocket.Application',start,[normal,[]]}} in application_master:init/4 line 138
+2021-04-13 13:39:48.346 [info] <0.1150.0> Application websocket exited with reason: {{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}}}},{'Elixir.Websocket.Application',start,[normal,[]]}}
+2021-04-13 13:40:17.369 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 13:40:17.371 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 13:40:17.373 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 13:40:17.373 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 13:40:17.374 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 13:40:17.374 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 13:40:17.413 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 13:40:17.413 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 13:40:17.418 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 13:40:17.419 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 13:40:17.431 [error] <0.429.0> Supervisor {<0.429.0>,ranch_listener_sup} had child ranch_acceptors_sup started with ranch_acceptors_sup:start_link('Elixir.Websocket.Router.HTTP', ranch_tcp) at undefined exit with reason badarg in context start_error
+2021-04-13 13:40:58.230 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 13:40:58.232 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 13:40:58.235 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 13:40:58.235 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 13:40:58.235 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 13:40:58.235 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 13:40:58.273 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 13:40:58.273 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 13:40:58.278 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 13:40:58.279 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 13:40:58.322 [warning] <0.471.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:40:59.524 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 13:41:13.761 [info] <0.44.0> Application lager started on node nonode@nohost
+2021-04-13 13:41:13.763 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2021-04-13 13:41:13.766 [info] <0.44.0> Application sasl started on node nonode@nohost
+2021-04-13 13:41:13.766 [info] <0.44.0> Application tools started on node nonode@nohost
+2021-04-13 13:41:13.766 [info] <0.44.0> Application jsx started on node nonode@nohost
+2021-04-13 13:41:13.767 [info] <0.44.0> Application recon started on node nonode@nohost
+2021-04-13 13:41:13.808 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2021-04-13 13:41:13.808 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2021-04-13 13:41:13.813 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2021-04-13 13:41:13.814 [info] <0.44.0> Application amqp started on node nonode@nohost
+2021-04-13 13:41:13.843 [warning] <0.471.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:41:14.368 [info] <0.44.0> Application websocket started on node nonode@nohost
+2021-04-13 13:42:00.737 [info] <0.1150.0> Application logger started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.737 [info] <0.1150.0> Application eex started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.738 [info] <0.1150.0> Application mime started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.738 [info] <0.1150.0> Application plug_crypto started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.738 [info] <0.1150.0> Application telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.738 [info] <0.1150.0> Application plug started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.738 [info] <0.1150.0> Application corsica started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.738 [info] <0.1150.0> Application cowlib started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application ranch started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application gen_registry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application certifi started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application unicode_util_compat started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application idna started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application metrics started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application mimerl started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application parse_trans started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.739 [info] <0.1150.0> Application ssl_verify_fun started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.743 [info] <0.1150.0> Application hackney started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.743 [info] <0.1150.0> Application httpoison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.743 [info] <0.1150.0> Application cowboy_telemetry started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.744 [info] <0.1150.0> Application plug_cowboy started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.744 [info] <0.1150.0> Application poison started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.744 [info] <0.1150.0> Application uuid started on node 'websocket@arthur-MS-7B48'
+2021-04-13 13:42:00.749 [warning] <0.1457.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 70000 ms
+2021-04-13 13:42:01.148 [info] <0.1150.0> Application websocket started on node 'websocket@arthur-MS-7B48'

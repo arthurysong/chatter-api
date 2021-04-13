@@ -27,3 +27,5 @@ websocket-*.tar
 /tmp
 
 .erlang.cookie
+env.txt
+env2.txt

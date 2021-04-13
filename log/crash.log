@@ -4041,3 +4041,470 @@ Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:liste
      Reason:     normal
      Offender:   [{pid,<0.472.0>},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
 
+2021-04-13 13:16:37 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-13 13:16:37 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.1351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.1350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.1352.0>,normal}]
+    links: [<0.1350.0>,<0.1150.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 243
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1617.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.57>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 3665
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1611.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.55>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2703
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1623.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.59>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2619
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1591.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.48>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 3806
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1605.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.53>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2702
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1620.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.58>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2622
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1626.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.60>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2622
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1602.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.52>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2702
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1614.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.56>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2702
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1629.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.61>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2626
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1599.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.51>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 3788
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1608.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.54>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2702
+  neighbours:
+2021-04-13 13:23:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1596.0>
+    registered_name: []
+    exception error: bad argument: [{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.50>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 2787
+  neighbours:
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1611.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1617.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1623.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1591.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1605.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1620.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1626.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1602.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1614.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1629.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1599.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1608.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1596.0> exit with reason: {badarg,[{erlang,iolist_size,[{'EXIT',<0.1481.0>,shutdown}],[]},{cow_ws,payload_length,1,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,725}]},{cow_ws,frame,2,[{file,"/home/arthur/code/websocket/deps/cowlib/src/cow_ws.erl"},{line,666}]},{cowboy_websocket,websocket_send,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,626}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,542}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:23:58 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1469.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.11>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2666
+  neighbours:
+2021-04-13 13:23:58 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1469.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:27:11 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1469.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.1355.0>,<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.11>,<0.1355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2666
+  neighbours:
+2021-04-13 13:27:11 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.1469.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-13 13:28:47 =ERROR REPORT====
+Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4000}]) for reason eaddrinuse (address already in use)
+2021-04-13 13:28:47 =SUPERVISOR REPORT====
+     Supervisor: {<0.429.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-13 13:28:47 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.431.0>
+    registered_name: []
+    exception exit: {{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse},[{ranch_acceptors_sup,listen_error,5,[{file,"/home/arthur/code/websocket/deps/ranch/src/ranch_acceptors_sup.erl"},{line,66}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,301}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.429.0>,'Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.429.0>,{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}}]
+    links: []
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 4668
+  neighbours:
+2021-04-13 13:28:47 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,4000}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Websocket.Router',[]}}]}]},stream_handlers => [cowboy_telemetry_h,cowboy_stream_h]}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-13 13:28:47 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.425.0>,<0.427.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 193
+  neighbours:
+2021-04-13 13:30:56 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_stream_h:request_process/3
+    pid: <0.527.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.HTTPoison.Error',id => nil,reason => timeout},[{'Elixir.HTTPoison','request!',5,[{file,"lib/httpoison.ex"},{line,156}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,6}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.526.0>,<0.369.0>,<0.368.0>,'Elixir.Websocket.Supervisor',<0.366.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.526.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 17365
+  neighbours:
+2021-04-13 13:30:56 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.526.0>, stream 1 had its request process <0.527.0> exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.HTTPoison.Error',id => nil,reason => timeout} and stacktrace [{'Elixir.HTTPoison','request!',5,[{file,"lib/httpoison.ex"},{line,156}]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,6}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-13 13:39:48 =SUPERVISOR REPORT====
+     Supervisor: {<0.1354.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     badarg
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-13 13:39:48 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,<<"4000">>}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Websocket.Router',[]}}]}]},stream_handlers => [cowboy_telemetry_h,cowboy_stream_h]}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-13 13:39:48 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.1356.0>
+    registered_name: []
+    exception exit: {badarg,[{inet_tcp,listen,2,[{file,"inet_tcp.erl"},{line,160}]},{ranch_acceptors_sup,init,1,[{file,"/home/arthur/code/websocket/deps/ranch/src/ranch_acceptors_sup.erl"},{line,39}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,301}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.1354.0>,'Elixir.Websocket.Supervisor',<0.1352.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.1354.0>,{shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}}}]
+    links: []
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 622
+  neighbours:
+2021-04-13 13:39:48 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.1351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.1350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.1352.0>,normal}]
+    links: [<0.1350.0>,<0.1150.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 191
+  neighbours:
+2021-04-13 13:40:17 =SUPERVISOR REPORT====
+     Supervisor: {<0.429.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     badarg
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-13 13:40:17 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.431.0>
+    registered_name: []
+    exception exit: {badarg,[{inet_tcp,listen,2,[{file,"inet_tcp.erl"},{line,160}]},{ranch_acceptors_sup,init,1,[{file,"/home/arthur/code/websocket/deps/ranch/src/ranch_acceptors_sup.erl"},{line,39}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,301}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.429.0>,'Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.429.0>]
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 686
+  neighbours:
+2021-04-13 13:40:17 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,<<"4000">>}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Websocket.Router',[]}}]}]},stream_handlers => [cowboy_telemetry_h,cowboy_stream_h]}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-13 13:40:17 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,badarg}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 191
+  neighbours:

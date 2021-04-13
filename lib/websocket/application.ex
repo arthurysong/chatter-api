@@ -16,7 +16,7 @@ defmodule Websocket.Application do
       {
         Plug.Cowboy, scheme: :http, plug: Websocket.Router, options: [
           port: 4000,
-          # port: 4001,
+          # port: System.get_env("PORT"),
           dispatch: dispatch()
         ]
       },
