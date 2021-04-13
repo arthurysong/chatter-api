@@ -11,6 +11,7 @@ Erlang cookie is 20 char alpha string chcek .erlang.cookie for ours.
 
 #!/bin/sh
 
+# nvm this part doesn't even work to set the cookie, needed to set it manually after downloading..
 echo '<erlang.cookie string>' | sudo tee -a /var/lib/rabbitmq/.erlang.cookie
 
 sudo apt-get install curl gnupg debian-keyring debian-archive-keyring apt-transport-https -y

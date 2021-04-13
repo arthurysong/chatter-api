@@ -2401,3 +2401,1597 @@ Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.493.0>, str
   neighbours:
 2021-04-12 16:07:09 =ERROR REPORT====
 Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.493.0>, stream 1 had its request process <0.494.0> exit with reason badarg and stacktrace [{erlang,byte_size,[#{<<"origin">> => <<"47.229.32.79">>}],[]},{'Elixir.Websocket.SocketHandler',init,2,[{file,"lib/websocket/socket_handler.ex"},{line,10}]},{cowboy_handler,execute,2,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_handler.erl"},{line,37}]},{cowboy_stream_h,execute,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,300}]},{cowboy_stream_h,request_process,3,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_stream_h.erl"},{line,291}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
+2021-04-12 19:16:14 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:16:14 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 529
+  neighbours:
+2021-04-12 19:16:14 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 19:16:56 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:16:56 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 529
+  neighbours:
+2021-04-12 19:16:56 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 19:17:13 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:17:13 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 529
+  neighbours:
+2021-04-12 19:17:13 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 19:17:15 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:17:15 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 529
+  neighbours:
+2021-04-12 19:17:15 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 19:18:14 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:18:14 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 529
+  neighbours:
+2021-04-12 19:18:14 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"could not fetch application environment :rabbitmq_host for application :websocket because configuration at :rabbitmq_host was not set">>},[{'Elixir.Application','fetch_env!',2,[{file,"lib/application.ex"},{line,656}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 19:19:25 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.538.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,18}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.430.0>,<0.429.0>,'Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.725>,<0.430.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 2734
+  neighbours:
+2021-04-12 19:19:25 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.538.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,18}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:19:26 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 39789
+  neighbours:
+2021-04-12 19:19:26 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:19:26 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 224
+  neighbours:
+2021-04-12 19:22:15 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:22:15 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 39550
+  neighbours:
+2021-04-12 19:22:15 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,22}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 242
+  neighbours:
+2021-04-12 19:27:51 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:27:51 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39626
+  neighbours:
+2021-04-12 19:27:51 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 250
+  neighbours:
+2021-04-12 19:37:28 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,not_allowed}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:37:28 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {{badmatch,{error,not_allowed}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39677
+  neighbours:
+2021-04-12 19:37:28 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,not_allowed}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 19:37:53 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 39654
+  neighbours:
+2021-04-12 19:37:53 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:37:53 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 254
+  neighbours:
+2021-04-12 19:42:27 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,not_allowed}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:42:27 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {{badmatch,{error,not_allowed}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39677
+  neighbours:
+2021-04-12 19:42:27 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,not_allowed}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 19:44:58 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.538.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,18}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.430.0>,<0.429.0>,'Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.725>,<0.430.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2860
+  neighbours:
+2021-04-12 19:44:58 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.538.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,18}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:45:47 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:45:47 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 39646
+  neighbours:
+2021-04-12 19:45:47 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 19:46:52 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.463.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,18}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.355.0>,<0.354.0>,'Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.9>,<0.355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2896
+  neighbours:
+2021-04-12 19:46:52 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.463.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,18}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:47:37 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39729
+  neighbours:
+2021-04-12 19:47:37 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:47:37 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 19:49:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.483.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.9>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2896
+  neighbours:
+2021-04-12 19:49:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.483.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.490.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.11>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.490.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.493.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.12>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:37 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.493.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:39 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.496.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.13>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:39 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.496.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:39 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.499.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.14>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2667
+  neighbours:
+2021-04-12 19:49:39 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.499.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:39 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.502.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.15>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:39 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.502.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:40 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.505.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.16>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:40 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.505.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:40 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.508.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.17>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:40 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.508.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:40 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.511.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.18>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:40 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.511.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:42 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.514.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.19>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:42 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.514.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:42 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.517.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.20>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2663
+  neighbours:
+2021-04-12 19:49:42 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.517.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:49:42 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.520.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.375.0>,<0.374.0>,'Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.21>,<0.375.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2677
+  neighbours:
+2021-04-12 19:49:42 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.520.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:50:34 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:50:34 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.477.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.372.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.373.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39729
+  neighbours:
+2021-04-12 19:50:34 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.371.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.370.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.372.0>,normal}]
+    links: [<0.370.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 231
+  neighbours:
+2021-04-12 19:53:41 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.463.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.355.0>,<0.354.0>,'Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.9>,<0.355.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2904
+  neighbours:
+2021-04-12 19:53:41 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.463.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 19:54:31 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39731
+  neighbours:
+2021-04-12 19:54:31 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 19:54:31 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 19:55:55 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.478.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.370.0>,<0.369.0>,'Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.9>,<0.370.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 2896
+  neighbours:
+2021-04-12 19:55:55 =ERROR REPORT====
+Ranch listener 'Elixir.Websocket.Router.HTTP' had connection process started with cowboy_clear:start_link/4 at <0.478.0> exit with reason: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"unknown registry: Registry.MyWebsocketApp">>},[{'Elixir.Registry','info!',1,[{file,"lib/registry.ex"},{line,1267}]},{'Elixir.Registry',register,3,[{file,"lib/registry.ex"},{line,920}]},{'Elixir.Websocket.SocketHandler',websocket_init,1,[{file,"lib/websocket/socket_handler.ex"},{line,14}]},{cowboy_websocket,handler_call,6,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_websocket.erl"},{line,527}]},{cowboy_http,loop,1,[{file,"/home/arthur/code/websocket/deps/cowboy/src/cowboy_http.erl"},{line,254}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-04-12 20:00:05 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39720
+  neighbours:
+2021-04-12 20:00:05 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:00:05 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 20:05:23 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:05:23 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39762
+  neighbours:
+2021-04-12 20:05:23 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 20:07:09 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:07:09 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39762
+  neighbours:
+2021-04-12 20:07:09 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 20:10:38 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:10:38 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39761
+  neighbours:
+2021-04-12 20:10:38 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 231
+  neighbours:
+2021-04-12 20:12:01 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:12:01 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 39631
+  neighbours:
+2021-04-12 20:12:01 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 20:13:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:13:11 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 39670
+  neighbours:
+2021-04-12 20:13:11 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 20:20:15 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:20:15 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 39683
+  neighbours:
+2021-04-12 20:20:15 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{server_sent_malformed_header,<<"HTTP/1.">>}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 20:23:48 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,econnrefused}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:23:48 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,econnrefused}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39748
+  neighbours:
+2021-04-12 20:23:48 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,econnrefused}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 231
+  neighbours:
+2021-04-12 20:34:35 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:34:35 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 42311
+  neighbours:
+2021-04-12 20:34:35 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{auth_failure,"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 254
+  neighbours:
+2021-04-12 20:35:16 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{socket_closed_unexpectedly,'connection.start'}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:35:16 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{socket_closed_unexpectedly,'connection.start'}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 39826
+  neighbours:
+2021-04-12 20:35:16 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{socket_closed_unexpectedly,'connection.start'}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 20:35:23 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{socket_closed_unexpectedly,'connection.start'}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:35:23 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,{socket_closed_unexpectedly,'connection.start'}}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 234
+  neighbours:
+2021-04-12 20:41:21 =ERROR REPORT====
+Failed to start Ranch listener 'Elixir.Websocket.Router.HTTP' in ranch_tcp:listen([{cacerts,'...'},{key,'...'},{cert,'...'},{port,4001}]) for reason eaddrinuse (address already in use)
+2021-04-12 20:41:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.369.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}
+     Offender:   [{pid,undefined},{id,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-12 20:41:21 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.371.0>
+    registered_name: []
+    exception exit: {{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse},[{ranch_acceptors_sup,listen_error,5,[{file,"/home/arthur/code/websocket/deps/ranch/src/ranch_acceptors_sup.erl"},{line,66}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,301}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.369.0>,'Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.369.0>]
+    dictionary: [{logger,error_logger}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 4685
+  neighbours:
+2021-04-12 20:41:21 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}
+     Offender:   [{pid,undefined},{id,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'}},{mfargs,{ranch_listener_sup,start_link,['Elixir.Websocket.Router.HTTP',ranch_tcp,#{max_connections => 16384,num_acceptors => 100,socket_opts => [{port,4001}]},cowboy_clear,#{env => #{dispatch => [{'_',[],[{[<<"ws">>,'...'],[],'Elixir.Websocket.SocketHandler',[]},{'_',[],'Elixir.Plug.Cowboy.Handler',{'Elixir.Websocket.Router',[]}}]}]},stream_handlers => [cowboy_telemetry_h,cowboy_stream_h]}]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2021-04-12 20:41:21 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,{ranch_listener_sup,'Elixir.Websocket.Router.HTTP'},{shutdown,{failed_to_start_child,ranch_acceptors_sup,{listen_error,'Elixir.Websocket.Router.HTTP',eaddrinuse}}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 192
+  neighbours:
+2021-04-12 20:43:09 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:43:09 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39752
+  neighbours:
+2021-04-12 20:43:09 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 20:44:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:44:11 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39750
+  neighbours:
+2021-04-12 20:44:11 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 20:46:13 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:46:13 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 39700
+  neighbours:
+2021-04-12 20:46:13 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,23}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 228
+  neighbours:
+2021-04-12 20:52:14 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:52:14 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.472.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.367.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.368.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39752
+  neighbours:
+2021-04-12 20:52:14 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.366.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.365.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.367.0>,normal}]
+    links: [<0.365.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-04-12 20:57:43 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-12 20:57:43 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception error: {{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.352.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.353.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 39740
+  neighbours:
+2021-04-12 20:57:43 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.351.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{badmatch,{error,timeout}},[{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,24}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.350.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.352.0>,normal}]
+    links: [<0.350.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 232
+  neighbours:

@@ -10,10 +10,6 @@ defmodule Websocket.SocketHandler do
   end
 
   def websocket_init(state) do
-    # IO.puts("when do i get called...")
-    # IO.inspect (:inet.getif())
-    # IO.puts("ip" <> :inet.getif())
-
     Registry.MyWebsocketApp
     |> Registry.register(state.registry_key, {})
 

@@ -18,7 +18,15 @@ defmodule Websocket.AMQPConsumer do
   def init(_opts) do
     IO.puts("queue" <> @queue)
     # a connection is a tcp connection to interact with RabbitMQ...
-    {:ok, conn} = Connection.open("amqp://guest:guest@localhost")
+    # {:ok, conn} = Connection.open("amqp://guest:guest@localhost")
+    IO.puts("host" <> Application.fetch_env!(:websocket, :rabbitmq_host))
+    # {:ok, conn} = Connection.open("amqp://test:test@" <> Application.fetch_env!(:websocket, :rabbitmq_host))
+    # {:ok, conn} = Connection.open("amqp://test:test@internal-rabbitmq-1546572793.us-west-1.elb.amazonaws.com")
+    {:ok, conn} = Connection.open("amqp://test:test@rmq-791691136.us-west-1.elb.amazonaws.com:5672")
+    # {:ok, conn} = Connection.open("amqp://test:test@13.57.218.23")
+
+    # this one is the amazon mq
+    # {:ok, conn} = Connection.open("amqps://test:testtest1234@b-ca5a495a-273b-4dcf-ae65-96126769fda1.mq.us-west-1.amazonaws.com:5671")
     # channels are a lightweight conncetion that share a single TCP connection...
     {:ok, chan} = Channel.open(conn)
     setup_queue(chan)
@@ -67,7 +75,7 @@ defmodule Websocket.AMQPConsumer do
     # You might want to run payload consumption in separate Tasks in production
     # consume(chan, tag, redelivered, payload)
     :ok = Basic.ack chan, tag
-    # IO.puts("consumed")
+    IO.puts("consumed")
     # IO.puts("payload" <> payload)
     msg_map = Poison.decode!(payload)
     # IO.inspect :erlang.list_to_pid(msg_map["sender_pid"])
