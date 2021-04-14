@@ -12,3 +12,10 @@ port = System.get_env("PORT") || raise("""
   environment variable PORT is missing.
   please set PORT on system
 """)
+
+amqp_url = System.get_env("RMQ_URL") || raise("""
+  environment variable RMQ_URL is missing.
+  please set RMQ_URL on system
+""")
+
+config :mix_docker, image: "chatter/demo"

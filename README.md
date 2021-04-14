@@ -2,6 +2,11 @@
 
 **TODO: Add description**
 
+## Things I want to talk about for this project...
+
+* Clustering RabbitMQ on AWS (Same Security groups)...
+* Dockerizing Elixir app and running using docker images..
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed

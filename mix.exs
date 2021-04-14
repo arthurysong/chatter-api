@@ -23,6 +23,7 @@ defmodule Websocket.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:mix_docker, "~> 0.5.0"},
       {:gen_registry, "~> 1.0"},
       {:httpoison, "~>1.8"},
       {:uuid, "~> 1.1"},

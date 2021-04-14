@@ -25,7 +25,7 @@ defmodule Websocket.AMQPConsumer do
     # {:ok, conn} = Connection.open("amqp://test:test@internal-rabbitmq-1546572793.us-west-1.elb.amazonaws.com")
 
     # this is our load balancer...
-    {:ok, conn} = Connection.open("amqp://test:test@rmq-791691136.us-west-1.elb.amazonaws.com:5672")
+    {:ok, conn} = Connection.open(System.get_env("RMQ_URL"))
     # {:ok, conn} = Connection.open("amqp://test:test@13.57.218.23")
 
     # this one is the amazon mq
