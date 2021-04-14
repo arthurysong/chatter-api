@@ -39,8 +39,8 @@ defmodule Websocket.AMQPConsumer do
 
     # IO.puts("genserver started and amqp connection init")
 
-    # queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
-    queue_uniq = @queue <> System.get_env("APP_ID")
+    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    # queue_uniq = @queue <> System.get_env("APP_ID")
     IO.puts("queue_uniq" <> queue_uniq)
     # Register the GenServer process as a consumer
     {:ok, _consumer_tag} = Basic.consume(chan, queue_uniq)
@@ -101,9 +101,11 @@ defmodule Websocket.AMQPConsumer do
   defp setup_queue(chan) do
     AMQP.Exchange.declare(chan, @exchange, :fanout, durable: true)
 
-    queue_uniq = @queue <> System.get_env("APP_ID")
+    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    # queue_uniq = @queue <> System.get_env("APP_ID")
 
-    {:ok, _} = Queue.declare(chan, queue_uniq, durable: true)
+    {:ok, _} = Queue.declare(chan, queue_uniq, durable: true,
+      arguments: [{"x-expires", :signedint, 10000}])
     :ok = Queue.bind(chan, queue_uniq, @exchange)
   end
 end

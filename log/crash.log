@@ -4508,3 +4508,43 @@ Ranch listener 'Elixir.Websocket.Router.HTTP', connection process <0.526.0>, str
     stack_size: 28
     reductions: 191
   neighbours:
+2021-04-14 13:41:12 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Websocket.Supervisor'}
+     Context:    start_error
+     Reason:     {{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - invalid arg 'x-expires' for queue 'chatter_test_queue<0.532.0>' in vhost '/': \"expected integer, got double\"">>}},{gen_server,call,[<0.546.0>,{call,{'queue.declare',0,<<"chatter_test_queue<0.532.0>">>,false,true,false,false,false,[{<<"x-expires">>,double,1000}]},none,<0.532.0>},70000]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Websocket.AMQPConsumer'},{mfargs,{'Elixir.Websocket.AMQPConsumer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-04-14 13:41:12 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Websocket.AMQPConsumer:init/1
+    pid: <0.532.0>
+    registered_name: []
+    exception exit: {{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - invalid arg 'x-expires' for queue 'chatter_test_queue<0.532.0>' in vhost '/': \"expected integer, got double\"">>}},{gen_server,call,[<0.546.0>,{call,{'queue.declare',0,<<"chatter_test_queue<0.532.0>">>,false,true,false,false,false,[{<<"x-expires">>,double,1000}]},none,<0.532.0>},70000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Queue',declare,3,[{file,"lib/amqp/queue.ex"},{line,45}]},{'Elixir.Websocket.AMQPConsumer',setup_queue,1,[{file,"lib/amqp_consumer.ex"},{line,107}]},{'Elixir.Websocket.AMQPConsumer',init,1,[{file,"lib/amqp_consumer.ex"},{line,35}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.Websocket.Supervisor',<0.427.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{gen_server_call_timeout,70000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 39987
+  neighbours:
+2021-04-14 13:41:12 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.426.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Websocket.AMQPConsumer',{{shutdown,{server_initiated_close,406,<<"PRECONDITION_FAILED - invalid arg 'x-expires' for queue 'chatter_test_queue<0.532.0>' in vhost '/': \"expected integer, got double\"">>}},{gen_server,call,[<0.546.0>,{call,{'queue.declare',0,<<"chatter_test_queue<0.532.0>">>,false,true,false,false,false,[{<<"x-expires">>,double,1000}]},none,<0.532.0>},70000]}}}},{'Elixir.Websocket.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.425.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.427.0>,normal}]
+    links: [<0.425.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 236
+  neighbours:
