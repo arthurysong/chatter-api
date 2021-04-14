@@ -18,18 +18,10 @@ defmodule Websocket.AMQPConsumer do
   def init(_opts) do
     IO.puts("queue" <> @queue)
     IO.puts(System.get_env("APP_ID"))
+
     # a connection is a tcp connection to interact with RabbitMQ...
-    # {:ok, conn} = Connection.open("amqp://guest:guest@localhost")
-    # IO.puts("host" <> Application.fetch_env!(:websocket, :rabbitmq_host))
-    # {:ok, conn} = Connection.open("amqp://test:test@" <> Application.fetch_env!(:websocket, :rabbitmq_host))
-    # {:ok, conn} = Connection.open("amqp://test:test@internal-rabbitmq-1546572793.us-west-1.elb.amazonaws.com")
-
-    # this is our load balancer...
     {:ok, conn} = Connection.open(System.get_env("RMQ_URL"))
-    # {:ok, conn} = Connection.open("amqp://test:test@13.57.218.23")
 
-    # this one is the amazon mq
-    # {:ok, conn} = Connection.open("amqps://test:testtest1234@b-ca5a495a-273b-4dcf-ae65-96126769fda1.mq.us-west-1.amazonaws.com:5671")
     # channels are a lightweight conncetion that share a single TCP connection...
     {:ok, chan} = Channel.open(conn)
     setup_queue(chan)
@@ -102,7 +94,6 @@ defmodule Websocket.AMQPConsumer do
     AMQP.Exchange.declare(chan, @exchange, :fanout, durable: true)
 
     queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
-    # queue_uniq = @queue <> System.get_env("APP_ID")
 
     {:ok, _} = Queue.declare(chan, queue_uniq, durable: true,
       arguments: [{"x-expires", :signedint, 10000}])
