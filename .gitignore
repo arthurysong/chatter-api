@@ -29,3 +29,4 @@ websocket-*.tar
 .erlang.cookie
 env.txt
 env2.txt
+.ignore
