@@ -4,6 +4,7 @@
 defmodule Websocket.AMQPConsumer do
   use GenServer
   use AMQP
+  # use UUID
 
   def start_link(initial_val) do
     GenServer.start_link(__MODULE__, initial_val, name: :amqp)
@@ -11,11 +12,13 @@ defmodule Websocket.AMQPConsumer do
 
   @exchange    "chatter_test_exchange"
   @queue       "chatter_test_queue"
+  @id          "#{UUID.uuid4()}"
   # @queue_error "#{@queue}_error"
 
   IO.puts(@queue)
 
   def init(_opts) do
+    # IO.puts(UUID.uuid4())
     IO.puts("queue" <> @queue)
     IO.puts(System.get_env("APP_ID"))
 
@@ -31,7 +34,8 @@ defmodule Websocket.AMQPConsumer do
 
     # IO.puts("genserver started and amqp connection init")
 
-    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    # queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    queue_uniq = @queue <> @id
     # queue_uniq = @queue <> System.get_env("APP_ID")
     IO.puts("queue_uniq" <> queue_uniq)
     # Register the GenServer process as a consumer
@@ -93,7 +97,8 @@ defmodule Websocket.AMQPConsumer do
   defp setup_queue(chan) do
     AMQP.Exchange.declare(chan, @exchange, :fanout, durable: true)
 
-    queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    # queue_uniq = @queue <> List.to_string(:erlang.pid_to_list(self()))
+    queue_uniq = @queue <> @id
 
     {:ok, _} = Queue.declare(chan, queue_uniq, durable: true,
       arguments: [{"x-expires", :signedint, 10000}])
